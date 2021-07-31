@@ -1,7 +1,11 @@
 package com.zwt.boot.controller;
 
+import com.zwt.boot.bean.Pet;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,12 +16,22 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 
+@Slf4j
 @RestController
 class HelloController {
 
 
+    @Autowired
+    Pet fuckPet;
+
+    @RequestMapping("/getPet")
+    public String getPet() {
+        return fuckPet.toString();
+    }
+
     @RequestMapping("/hello")
-    public String handle01() {
-        return "Hello, Spring Boot 2 你好";
+    public String handle01(@RequestParam(value = "name") String name) {
+        log.info("fuck");
+        return "Hello,  Boot 2 你好"+name;
     }
 }
