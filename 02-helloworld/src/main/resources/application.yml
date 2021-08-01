@@ -1,0 +1,30 @@
+person:
+  boss: true
+  birth: 2019/12/9
+  age: 29
+  #  interests: [篮球,足球]
+  interests:
+    - 篮球
+    - 足球
+    - 排球
+    - 99
+  animal: [ 阿猫,阿狗 ]
+  #  score:
+  #    english: 80
+  #    math: 90
+  score: { english: 80,math: 90 }
+  salarys:
+    - 9999.98
+    - 9999.99
+  pet:
+    name: 阿毛毛
+    weight: 999.9999
+  allPets:
+    sick:
+      - { name: 阿狗, weight: 99.99 }
+      - name: 阿毛
+        weight: 88.888
+      - name: 虫子
+        weight: 77.77
+    health: [ { name: 阿花, weight: 991.99 },{ name: 阿酒, weight: 919.99 } ]
+  user-name: 张三
